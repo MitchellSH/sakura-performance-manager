@@ -1,0 +1,20 @@
+@mixin pseudo ($content: '') {
+  position: absolute;
+  content: $content;
+}
+
+@mixin transition ($prop: all, $time: .3s, $effect: ease) {
+  -webkit-transition: $prop $time $effect;
+  -moz-transition: $prop $time $effect;
+  -ms-transition: $prop $time $effect;
+  -o-transition: $prop $time $effect;
+  transition: $prop $time $effect;
+}
+
+@mixin transitionBlock ($prop: all, $time: 250ms) {
+  -webkit-transition: $prop $time cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -moz-transition: $prop $time cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -ms-transition: $prop $time cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -o-transition: $prop $time cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: $prop $time cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
